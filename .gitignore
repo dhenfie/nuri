@@ -5,6 +5,9 @@
 /build/
 /dist/
 
+# Ignore phpunit cache
+/.phpunit
+
 # Ignore environment-specific files
 .env
 .env.*
