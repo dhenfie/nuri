@@ -1,0 +1,25 @@
+{
+    "name": "dhenfie/nuri",
+    "description": "PHP Template System",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^10.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dhenfie",
+            "email": "fajarsusilo1600@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dhenfie\\Nuri\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dhenfie\\Nuri\\Tests": "tests/"
+        }
+    }
+}
