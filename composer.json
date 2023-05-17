@@ -19,10 +19,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Dhenfie\\Nuri\\Tests\\": "tests/"
+            "Dhenfie\\Nuri\\Tests": "tests/"
         }
-    },
-    "scripts": {
-        "test": "./vendor/bin/phpunit"
     }
 }
