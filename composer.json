@@ -3,7 +3,8 @@
     "description": "PHP Template System",
     "type": "library",
     "require-dev": {
-        "phpunit/phpunit": "^10.1"
+        "phpunit/phpunit": "^10.1",
+        "friendsofphp/php-cs-fixer": "^3.16"
     },
     "license": "MIT",
     "authors": [
@@ -19,7 +20,11 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Dhenfie\\Nuri\\Tests": "tests/"
+            "Dhenfie\\Nuri\\Tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "test": "./vendor/phpunit/phpunit/phpunit",
+        "cs-fix": "./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix ./src --rules=@PSR12"
     }
 }
