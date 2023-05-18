@@ -8,8 +8,7 @@ class Section
 
     private string $currentSection;
 
-
-    public function create(string $name, string $values) : void
+    public function create(string $name, string $values): void
     {
         $this->section[$name] = $values;
     }
@@ -29,17 +28,13 @@ class Section
         ob_end_clean();
     }
 
-    // public function getSection(string $name): string {
-    //     // retur
-    // }
-
-    public function getContents() : string
+    public function getContents(): string
     {
         $contents = ob_get_contents();
         return ($contents === false) ? '' : $contents;
     }
 
-    public function getSection(string $name) : string
+    public function getSection(string $name): string
     {
         $contents = isset($this->section[$name]) ? $this->section[$name] : '';
         return $contents;
