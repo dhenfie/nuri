@@ -1,6 +1,6 @@
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd" cacheDirectory=".phpunit"
-    cacheResult="true" cacheResultFile=".phpunit-cache">
+    cacheResult="true" cacheResultFile=".phpunit-cache" beStrictAboutOutputDuringTests="true">
     <testsuites>
         <testsuite name="all">
             <directory>tests/</directory>
