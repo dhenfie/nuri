@@ -1,9 +1,13 @@
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd" cacheDirectory=".phpunit"
-    cacheResult="true" cacheResultFile=".phpunit-cache" beStrictAboutOutputDuringTests="true">
+    cacheResult="true" cacheResultFile=".phpunit-cache" beStrictAboutOutputDuringTests="true"
+    failOnWarning="true" failOnEmptyTestSuite="true" failOnRisky="true">
+
     <testsuites>
         <testsuite name="all">
             <directory>tests/</directory>
+            <exclude>tests/nuri/</exclude>
         </testsuite>
     </testsuites>
+
 </phpunit>
