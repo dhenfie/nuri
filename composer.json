@@ -24,7 +24,7 @@
         }
     },
     "scripts": {
-        "test": "./vendor/phpunit/phpunit/phpunit",
+        "test": "./vendor/bin/phpunit",
         "cs-fix": "./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix ./src --rules=@PSR12"
     }
 }
