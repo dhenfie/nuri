@@ -14,13 +14,15 @@ class FileHandler
     {
         if ($this->checkPath($viewPath)) {
             $this->viewPath = realpath($viewPath);
+        } else {
+            throw new Exception(sprintf('Invalid viewPath !'));
         }
     }
 
     private function checkPath(string $path): bool
     {
         $dir = realpath($path);
-        if (! is_dir($path)) {
+        if (!is_dir($path)) {
             return false;
         }
         return true;
@@ -47,7 +49,7 @@ class FileHandler
 
         if ($this->fileExist($filename)) {
 
-            if (is_array($data) && ! empty($data)) {
+            if (is_array($data) && !empty($data)) {
                 extract($data);
             }
 
