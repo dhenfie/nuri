@@ -17,6 +17,11 @@ class FileHandlerTest extends TestCase
         $this->file = new FileHandler(__DIR__);
     }
 
+    public function testFileHandlerInvalidViewPath(){
+        self::expectException(Exception::class);
+        $file = new FileHandler('invalid-dir');
+    }
+
     public function testCurrentDir()
     {
         $dir = realpath(__DIR__);
