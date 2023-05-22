@@ -32,7 +32,7 @@ class FileHandler
         return $validPath;
     }
 
-    private function fileExist(string $path): bool
+    public function fileExist(string $path): bool
     {
         $filename = $this->viewPath . DIRECTORY_SEPARATOR . $this->formatPath($path) . $this->fileExt;
         if (file_exists($filename)) {

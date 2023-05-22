@@ -35,23 +35,26 @@ class FileHandlerTest extends TestCase
 
     public function testFileExit()
     {
-        $actual = $this->methodFileExist('nuri.TestFile');
+        $actual = $this->file->fileExist('nuri.TestFile');
         self::assertTrue($actual);
     }
 
-    public function testInclude(){
+    public function testInclude()
+    {
         self::expectOutputString('included');
 
         $this->file->include('nuri.TestIncludeFile');
     }
 
-    public function testIncludeWithData(){
+    public function testIncludeWithData()
+    {
         self::expectOutputString('Hello World !');
 
         $this->file->include('nuri.TestIncludeFile', ['message' => 'Hello World !']);
     }
 
-    public function testIncludeError(){
+    public function testIncludeError()
+    {
         self::expectException(Exception::class);
 
         $this->file->include('invalid-dir');
@@ -79,22 +82,5 @@ class FileHandlerTest extends TestCase
         $reflection->setAccessible(true);
 
         return $reflection->invoke($classTarget, $path);
-    }
-
-
-    /**
-     * Alias FileHandler::fileExist()
-     *
-     * @param string $file
-     * @return bool
-     */
-    private function methodFileExist(string $file)
-    {
-        $classTarget = $this->file;
-        $reflection  = new ReflectionMethod($classTarget, 'fileExist');
-        $reflection->setAccessible(true);
-
-        return $reflection->invoke($classTarget, $file);
-
     }
 }
