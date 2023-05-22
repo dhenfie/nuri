@@ -4,8 +4,15 @@
     failOnWarning="true" failOnEmptyTestSuite="true" failOnRisky="true">
 
     <testsuites>
-        <testsuite name="all">
-            <directory>tests/</directory>
+        <testsuite name="Section Unit">
+            <file>tests/SectionTest.php</file>
+        </testsuite>
+        <testsuite name="FileHandler Unit">
+            <file>tests/FileHandlerTest.php</file>
+            <exclude>tests/nuri/</exclude>
+        </testsuite>
+        <testsuite name="Package Test">
+            <file>tests/NuriTest.php</file>
             <exclude>tests/nuri/</exclude>
         </testsuite>
     </testsuites>
