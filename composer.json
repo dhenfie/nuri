@@ -16,7 +16,10 @@
     "autoload": {
         "psr-4": {
             "Dhenfie\\Nuri\\": "src/"
-        }
+        },
+        "files": [
+            "src/Helper.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
