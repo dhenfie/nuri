@@ -1,12 +1,7 @@
 ## Nuri
-Nuri adalah sebuah template engine untuk PHP dengan desain sederhana dan minimalis.
+Nuri adalah sebuah template system untuk PHP dengan desain sederhana.
 
-anda tidak perlu mempelajari dan memahami syntax syntax baru untuk menggunakan **Nuri** sebagai system templating pada project anda.
+Sederhana karena anda tidak perlu mempelajari syntax syntax baru. semua fungsi yang ada untuk mengatur tata letak di definisikan dalam fungsi PHP asli.
 
-
-### Panduan dan Install
-gunakan composer untuk menginstall **Nuri**.
-```console
-composer require dhenfie/nuri
-```
+[Baca Dokumentasi](https://github.com/dhenfie/nuri/wiki)
 
